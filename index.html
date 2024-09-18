@@ -103,8 +103,9 @@
 
         .leftPanel img {
             width: 100%; /* Make the image the full width of the left column */
-            height: 2in; /* Set the height to 1.5 inches */
+            height: 1.5in; /* Set the height to 1.5 inches */
             object-fit: cover; /* Ensures the image covers the space without distortion */
+            clip-path: inset(1.5in 0 0 0); /* Crop 1.5 inches from the top */
         }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -122,7 +123,7 @@
                         <h2>CONTACT</h2>
                         <div class="smallText">
                             <p><i class="fa fa-phone contactIcon" aria-hidden="true"></i>(980) 297-2714</p>
-                            <p><i class="fa fa-envelope contactIcon" aria-hidden="true"></i><a href="egsutton212@gmail.com">egsutton212@gmail.com</a></p>
+                            <p><i class="fa fa-envelope contactIcon" aria-hidden="true"></i><a href="mailto:egsutton212@gmail.com">egsutton212@gmail.com</a></p>
                             <p><i class="fa fa-map-marker contactIcon" aria-hidden="true"></i>Greenville, SC</p>
                             <p><i class="fa fa-linkedin-square contactIcon" aria-hidden="true"></i><a href="https://www.linkedin.com/in/emma-sutton-275a0722b/">LinkedIn</a></p>
                         </div>
@@ -131,19 +132,21 @@
                         <h2>SKILLS</h2>
                         <div class="smallText">
                             <div class="skill">
-                                <div><span>Microsoft Office - 4 Years </span></div>
+                                <div><span>Microsoft Office - 4 Years</span></div>
                                 <div class="yearsOfExperience">
                                     <span>4 years</span>
                                 </div>
                             </div>
                             <div class="skill">
-                                <div><span>Adobe Creative Suite - 4 Years </span></div>
+                                <div><span>Adobe Creative Suite - 4 Years</span></div>
                                 <div class="yearsOfExperience">
+                                    <span>4 years</span>
                                 </div>
                             </div>
                             <div class="skill">
-                                <div><span>Python, Html, R, SQL - 2 Years</span></div>
+                                <div><span>Python, HTML, R, SQL - 2 Years</span></div>
                                 <div class="yearsOfExperience">
+                                    <span>2 years</span>
                                 </div>
                             </div>
                         </div>
@@ -170,7 +173,7 @@
                         <h2>EXPERIENCE</h2>
                         <div class="experienceItem">
                             <h3><strong>Campus Life Coordinator, Carolina Union, Chapel Hill, NC</strong></h3>
-                            <h3>Sept 2022 - May 2025</<h3>
+                            <span>Sept 2022 - May 2025</span>
                         </div>
                         <div class="experienceDetails smallText">
                             <ul>
@@ -183,7 +186,7 @@
 
                         <div class="experienceItem">
                             <h3><strong>LabCorps Intern, United Way of Franklin County, Franklinton, NC</strong></h3>
-                            </h3>May 2024 - Aug 2024</</h3>
+                            <span>May 2024 - Aug 2024</span>
                         </div>
                         <div class="experienceDetails smallText">
                             <ul>
