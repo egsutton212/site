@@ -38,6 +38,9 @@
             width: 50%;
             padding: 20px;
             box-sizing: border-box;
+            position: relative;
+            height: 1.5in; /* Set height to ensure proper layout */
+            overflow: hidden;
         }
 
         .rightPanel {
@@ -97,15 +100,23 @@
             margin-bottom: 0;
         }
 
-        .rightPanel h1, .rightPanel h3 {
+        .rightPanel h1 {
             text-align: left; /* Left align text in the right panel */
+        }
+
+        .rightPanel h3 {
+            text-align: left; /* Left align text in the right panel */
+        }
+
+        .rightPanel .infoScience {
+            font-size: 14px; /* Smaller font size */
+            font-style: italic; /* Italicized text */
         }
 
         .leftPanel img {
             width: 100%; /* Make the image the full width of the left column */
             height: 1.5in; /* Set the height to 1.5 inches */
             object-fit: cover; /* Ensures the image covers the space without distortion */
-            clip-path: inset(1.5in 0 0 0); /* Crop 1.5 inches from the top */
         }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -117,7 +128,7 @@
     <page size="A4">
         <div class="container">
             <div class="leftPanel">
-                <img src="IMG_3872.jpg" alt="Emma Sutton"/>
+                <!-- Image will be displayed as a background image -->
                 <div class="details">
                     <div class="item bottomLineSeparator">
                         <h2>CONTACT</h2>
@@ -168,7 +179,7 @@
                 <div>
                     <h1>Emma Sutton</h1>
                     <h3>Senior at University of North Carolina at Chapel Hill</h3>
-                    <h3>Information Science, Data Science Concentration</h3>
+                    <h3 class="infoScience">Information Science, Data Science Concentration</h3>
                     <div class="item">
                         <h2>EXPERIENCE</h2>
                         <div class="experienceItem">
