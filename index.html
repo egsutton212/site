@@ -44,7 +44,7 @@
             width: 50%;
             padding: 20px;
             box-sizing: border-box;
-            text-align: center; /* Center content in the right panel */
+            text-align: left; /* Left align content in the right panel */
         }
 
         .item {
@@ -154,6 +154,17 @@
         .experienceDetails li {
             margin-bottom: 5px; /* Space between list items */
         }
+
+        .downloadButton {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+        }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -166,7 +177,7 @@
             <div class="leftPanel">
                 <h1>Emma Sutton</h1>
                 <h3>University of North Carolina at Chapel Hill</h3>
-                <h3 class="infoScience">Information Science, Data Science Concentration</h3>
+                <h3 class="infoScience">Information Science, <i>Data Science Concentration</i></h3>
                 <div class="item">
                     <div class="item bottomLineSeparator">
                         <h2>EXPERIENCE</h2>
@@ -219,40 +230,22 @@
                     <div class="item bottomLineSeparator">
                         <h2>CONTACT</h2>
                         <div class="smallText">
-                            <p><i class="fa fa-phone contactIcon" aria-hidden="true"></i>(980) 297-2714</p>
-                            <p><i class="fa fa-envelope contactIcon" aria-hidden="true"></i><a href="mailto:egsutton212@gmail.com">egsutton212@gmail.com</a></p>
-                            <p><i class="fa fa-map-marker contactIcon" aria-hidden="true"></i>Greenville, SC</p>
-                            <p><i class="fa fa-linkedin-square contactIcon" aria-hidden="true"></i><a href="https://www.linkedin.com/in/emma-sutton-275a0722b/">LinkedIn</a></p>
-                        </div>
-                    </div>
-                    <div class="item bottomLineSeparator">
-                        <h2>SKILLS</h2>
-                        <div class="smallText">
-                            <div class="skill">
-                                <div><span>Microsoft Office - 4 Years</span></div>
-                                <div class="yearsOfExperience">
-                                </div>
-                            </div>
-                            <div class="skill">
-                                <div><span>Adobe Creative Suite - 4 Years</span></div>
-                                <div class="yearsOfExperience">
-                                </div>
-                            </div>
-                            <div class="skill">
-                                <div><span>Python, HTML, R, SQL - 2 Years</span></div>
-                                <div class="yearsOfExperience">
-                                </div>
-                            </div>
+                            <p><i class="fa fa-phone contactIcon" aria-hidden="true"></i> (123) 456-7890</p>
+                            <p><i class="fa fa-envelope contactIcon" aria-hidden="true"></i> emma.sutton@example.com</p>
                         </div>
                     </div>
                     <div class="item bottomLineSeparator">
                         <h2>EDUCATION</h2>
                         <div class="educationItem">
-                            <h3><strong>University of North Carolina at Chapel Hill</strong></h3>
-                            <span>Bachelor of Science in Information Science, Data Science Concentration</span>
-                            <div class="educationDetails">
-                                <span>Expected May 2025</span>
-                            </div>
+                            <h3>University of North Carolina at Chapel Hill</h3>
+                            <p class="educationDetails">B.S. in Information Science, Data Science Concentration</p>
+                            <a href="CV_Sutton.docx.pdf" class="downloadButton">Download CVt</a>
+                        </div>
+                    </div>
+                    <div class="item bottomLineSeparator">
+                        <h2>SKILLS</h2>
+                        <div class="smallText">
+                            <p>Data Analysis, Programming, Project Management, Communication</p>
                         </div>
                     </div>
                 </div>
