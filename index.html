@@ -39,8 +39,6 @@
             padding: 20px;
             box-sizing: border-box;
             position: relative;
-            height: 1.5in; /* Set height to ensure proper layout */
-            overflow: hidden;
         }
 
         .rightPanel {
@@ -113,10 +111,21 @@
             font-style: italic; /* Italicized text */
         }
 
+        .leftPanel .imageContainer {
+            width: 1.5in; /* Set width to 1.5 inches */
+            height: 1.5in; /* Set height to 1.5 inches */
+            overflow: hidden; /* Hide overflowed content */
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
         .leftPanel img {
-            width: 100%; /* Make the image the full width of the left column */
-            height: 1.5in; /* Set the height to 1.5 inches */
-            object-fit: cover; /* Ensures the image covers the space without distortion */
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: -0.25in; /* Adjust top position to crop from the top */
         }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -128,99 +137,11 @@
     <page size="A4">
         <div class="container">
             <div class="leftPanel">
-                <!-- Image will be displayed as a background image -->
+                <div class="imageContainer">
+                    <img src="IMG_3872.jpg" alt="Emma Sutton"/>
+                </div>
                 <div class="details">
                     <div class="item bottomLineSeparator">
                         <h2>CONTACT</h2>
                         <div class="smallText">
-                            <p><i class="fa fa-phone contactIcon" aria-hidden="true"></i>(980) 297-2714</p>
-                            <p><i class="fa fa-envelope contactIcon" aria-hidden="true"></i><a href="mailto:egsutton212@gmail.com">egsutton212@gmail.com</a></p>
-                            <p><i class="fa fa-map-marker contactIcon" aria-hidden="true"></i>Greenville, SC</p>
-                            <p><i class="fa fa-linkedin-square contactIcon" aria-hidden="true"></i><a href="https://www.linkedin.com/in/emma-sutton-275a0722b/">LinkedIn</a></p>
-                        </div>
-                    </div>
-                    <div class="item bottomLineSeparator">
-                        <h2>SKILLS</h2>
-                        <div class="smallText">
-                            <div class="skill">
-                                <div><span>Microsoft Office - 4 Years</span></div>
-                                <div class="yearsOfExperience">
-                                    <span>4 years</span>
-                                </div>
-                            </div>
-                            <div class="skill">
-                                <div><span>Adobe Creative Suite - 4 Years</span></div>
-                                <div class="yearsOfExperience">
-                                    <span>4 years</span>
-                                </div>
-                            </div>
-                            <div class="skill">
-                                <div><span>Python, HTML, R, SQL - 2 Years</span></div>
-                                <div class="yearsOfExperience">
-                                    <span>2 years</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <h2>EDUCATION</h2>
-                        <div class="educationItem">
-                            <h3><strong>University of North Carolina at Chapel Hill</strong></h3>
-                            <span><strong>Aug 2021 - May 2025</strong></span>
-                        </div>
-                        <div class="educationDetails smallText">
-                            <p>Bachelor of Science: Information Science - Data Science Concentration</p>
-                            <p>Related Coursework: Python, R, Website Design, Database Management</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="rightPanel">
-                <div>
-                    <h1>Emma Sutton</h1>
-                    <h3>Senior at University of North Carolina at Chapel Hill</h3>
-                    <h3 class="infoScience">Information Science, Data Science Concentration</h3>
-                    <div class="item">
-                        <h2>EXPERIENCE</h2>
-                        <div class="experienceItem">
-                            <h3><strong>Campus Life Coordinator, Carolina Union, Chapel Hill, NC</strong></h3>
-                            <span>Sept 2022 - May 2025</span>
-                        </div>
-                        <div class="experienceDetails smallText">
-                            <ul>
-                                <li>Managed graduation requirements for over 15,000 undergraduate students, ensuring accurate record keeping.</li>
-                                <li>Organized programming events for voting advocacy initiatives and leadership bootcamps, enhancing student engagement.</li>
-                                <li>Coordinated with over 800 on-campus, student-run organizations for constitution review and re-registration.</li>
-                                <li>Oversaw the campus-wide website, HeelLife, to approve student forms and events, streamlining administrative processes.</li>
-                            </ul>
-                        </div>
-
-                        <div class="experienceItem">
-                            <h3><strong>LabCorps Intern, United Way of Franklin County, Franklinton, NC</strong></h3>
-                            <span>May 2024 - Aug 2024</span>
-                        </div>
-                        <div class="experienceDetails smallText">
-                            <ul>
-                                <li>Created a functional bookings calendar and working inventory for the Innovation Mobile Lab, improving operational efficiency.</li>
-                                <li>Facilitated STEM-related activities and events for middle school students in underserved areas to promote educational equity.</li>
-                                <li>Worked with potential donors in meetings and grant-writing, securing funding for community programs.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="item bottomLineSeparator">
-                        <h2>ACTIVITIES</h2>
-                        <div class="activitiesItem">
-                            <h3><strong>Disability Advocates for Carolina</strong></h3>
-                            <span>Treasurer, Fall 2024 - May 2025</span>
-                        </div>
-                        <div class="activitiesItem">
-                            <h3><strong>Carolina Women in Business</strong></h3>
-                            <span>Mentor and Member, Fall 2021 - May 2025</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </page>
-</body>
-</html>
+                            <p><i class="fa fa-phone contactIcon" aria-hidden="true"></i>(980) 
