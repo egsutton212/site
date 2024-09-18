@@ -72,7 +72,7 @@
             justify-content: space-between;
         }
 
-        .educationItem {
+        .educationItem, .experienceItem {
             display: flex;
             justify-content: space-between;
         }
@@ -81,25 +81,30 @@
             margin: 0;
         }
 
-        .educationDetails {
+        .educationDetails, .experienceDetails, .activitiesDetails {
             margin-top: 5px;
         }
 
-        .experienceItem {
-            display: flex;
-            justify-content: space-between;
+        .experienceItem h3, .activitiesItem h3 {
+            margin: 0;
+        }
+
+        .experienceItem strong, .activitiesItem strong {
+            font-size: 14px;
         }
 
         .lastParagrafNoMarginBottom {
             margin-bottom: 0;
         }
 
-        .rightPanel h1 {
-            text-align: left; /* Ensures left alignment for the name */
+        .rightPanel h1, .rightPanel h3 {
+            text-align: left; /* Left align text in the right panel */
         }
 
-        .rightPanel h3 {
-            text-align: left; /* Left alignment for additional info */
+        .leftPanel img {
+            width: 100%; /* Make the image the full width of the left column */
+            height: 1.5in; /* Set the height to 1.5 inches */
+            object-fit: cover; /* Ensures the image covers the space without distortion */
         }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -138,7 +143,7 @@
                                 </div>
                             </div>
                             <div class="skill">
-                                <div><span>Python, Html, R, SQL </span></div>
+                                <div><span>Python, Html, R, SQL</span></div>
                                 <div class="yearsOfExperience">
                                     <span>2 years</span>
                                 </div>
@@ -163,6 +168,45 @@
                     <h1>Emma Sutton</h1>
                     <h3>Information Science Student</h3>
                     <h3>University of North Carolina at Chapel Hill</h3>
+                    <div class="item">
+                        <h2>EXPERIENCE</h2>
+                        <div class="experienceItem">
+                            <h3><strong>Campus Life Coordinator, Carolina Union, Chapel Hill, NC</strong></h3>
+                            <span>Sept 2022 - May 2025</span>
+                        </div>
+                        <div class="experienceDetails smallText">
+                            <ul>
+                                <li>Managed graduation requirements for over 15,000 undergraduate students, ensuring accurate record keeping.</li>
+                                <li>Organized programming events for voting advocacy initiatives and leadership bootcamps, enhancing student engagement.</li>
+                                <li>Coordinated with over 800 on-campus, student-run organizations for constitution review and re-registration.</li>
+                                <li>Oversaw the campus-wide website, HeelLife, to approve student forms and events, streamlining administrative processes.</li>
+                            </ul>
+                        </div>
+
+                        <div class="experienceItem">
+                            <h3><strong>LabCorps Intern, United Way of Franklin County, Franklinton, NC</strong></h3>
+                            <span>May 2024 - Aug 2024</span>
+                        </div>
+                        <div class="experienceDetails smallText">
+                            <ul>
+                                <li>Created a functional bookings calendar and working inventory for the Innovation Mobile Lab, improving operational efficiency.</li>
+                                <li>Facilitated STEM-related activities and events for middle school students in underserved areas to promote educational equity.</li>
+                                <li>Worked with potential donors in meetings and grant-writing, securing funding for community programs.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <h2>ACTIVITIES</h2>
+                        <div class="activitiesItem">
+                            <h3><strong>Disability Advocates for Carolina</strong></h3>
+                            <span>Treasurer, Fall 2024 - May 2025</span>
+                        </div>
+                        <div class="activitiesItem">
+                            <h3><strong>Carolina Women in Business</strong></h3>
+                            <span>Mentor and Member, Fall 2021 - May 2025</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
