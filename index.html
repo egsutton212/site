@@ -108,6 +108,7 @@
             align-items: center;
             justify-content: center;
             margin: 0 auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add drop shadow */
         }
 
         .rightPanel img {
@@ -115,6 +116,25 @@
             height: auto;
             position: absolute;
             top: -0.25in;
+        }
+
+        .nameAndTitle {
+            text-align: center;
+            margin-bottom: 20px;
+            border: 2px solid #007BFF; /* Blue border */
+            padding: 10px; /* Padding around the text */
+            background-color: #fff; /* White background */
+            border-radius: 8px; /* Rounded corners */
+        }
+
+        .nameAndTitle h1 {
+            color: rgb(43, 71, 131); /* Matches background color */
+            margin: 0;
+        }
+
+        .nameAndTitle h2 {
+            font-style: italic;
+            margin: 0;
         }
 
         .jobTitle {
@@ -210,21 +230,6 @@
         .centeredWrapper .downloadButton,
         .centeredWrapper form {
             margin: 10px;
-        }
-
-        .nameAndTitle {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .nameAndTitle h1 {
-            color: rgb(43, 71, 131); /* Matches background color */
-            margin: 0;
-        }
-
-        .nameAndTitle h2 {
-            font-style: italic;
-            margin: 0;
         }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
