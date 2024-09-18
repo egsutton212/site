@@ -5,7 +5,7 @@
         body {
             background: rgb(43, 71, 131); 
             width: 21cm;
-            height: 29.7cm;
+            height: auto;
             margin: 0 auto;
             font-family: 'Times New Roman', Times, serif; 
         }
@@ -14,24 +14,24 @@
             background: rgba(205, 205, 205, 0.99);
             display: block;
             margin: 0 auto;
-            margin-bottom: 0.5cm;
             position: relative;
+            padding: 20px;
+            box-sizing: border-box;
         }
 
         page[size="A4"] {  
             width: 21cm;
-            height: 29.7cm; 
+            height: auto; 
         }
 
         @page {
-            size: 21cm 29.7cm;
+            size: 21cm auto;
             margin: 0mm;
         }
 
         .container {
             display: flex;
             width: 100%;
-            height: 100%;
         }
 
         .leftPanel {
@@ -202,10 +202,6 @@
     <page size="A4">
         <div class="container">
             <div class="leftPanel">
-                <h1>Emma Sutton</h1>
-                <h3>University of North Carolina at Chapel Hill</h3>
-                <h3 class="infoScience"><i>Information Science, Data Science Concentration</i></h3>
-
                 <!-- Education Section -->
                 <div class="item bottomLineSeparator">
                     <h2>EDUCATION</h2>
@@ -222,9 +218,6 @@
                     </div>
                 </div>
 
-                <!-- Bottom Line Separator After Education -->
-                <div class="bottomLineSeparator"></div>
-
                 <!-- Skills Section -->
                 <div class="item bottomLineSeparator">
                     <h2>SKILLS</h2>
@@ -237,6 +230,44 @@
                             <li>R and RStudio</li>
                             <li>Python and PyCharm</li>
                         </ul>
+                    </div>
+                </div>
+
+                <!-- Activities Section -->
+                <div class="item bottomLineSeparator">
+                    <h2>ACTIVITIES</h2>
+                    <div class="activitiesItem">
+                        <h3><strong>Disability Advocates for Carolina</strong></h3>
+                        <span>Treasurer, Fall 2024 - May 2025</span>
+                    </div>
+                    <div class="activitiesItem">
+                        <h3><strong>Carolina Women in Business</strong></h3>
+                        <span>Mentor and Member, Fall 2021 - May 2025</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rightPanel">
+                <!-- Picture Section -->
+                <div class="item">
+                    <div class="imageContainer">
+                        <img src="IMG_3872.jpg" alt="Emma Sutton"/>
+                    </div>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="item bottomLineSeparator">
+                    <h2>CONTACT</h2>
+                    <div class="contactInfo">
+                        <div class="smallText">
+                            <p>Email: <a href="mailto:egsutton212@gmail.com">egsutton212@gmail.com</a></p>
+                            <p>Phone: (980) 297-2714</p>
+                        </div>
+                        <div class="linkedin">
+                            <a href="https://www.linkedin.com/in/emma-sutton-275a0722b/" target="_blank">
+                                <i class="fa fa-linkedin"></i> LinkedIn Profile
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -272,51 +303,20 @@
                     </div>
                 </div>
 
-                <!-- Activities Section -->
+                <!-- Download CV Button -->
                 <div class="item bottomLineSeparator">
-                    <h2>ACTIVITIES</h2>
-                    <div class="activitiesItem">
-                        <h3><strong>Disability Advocates for Carolina</strong></h3>
-                        <span>Treasurer, Fall 2024 - May 2025</span>
-                    </div>
-                    <div class="activitiesItem">
-                        <h3><strong>Carolina Women in Business</strong></h3>
-                        <span>Mentor and Member, Fall 2021 - May 2025</span>
-                    </div>
+                    <a href="CV_Sutton.docx.pdf" class="downloadButton" download>Download CV</a>
                 </div>
 
-                <!-- Contact Form Section -->
-                <div class="item bottomLineSeparator">
+                <!-- Questions Form -->
+                <div class="item">
                     <h2>Questions for me?</h2>
-                    <form action="/submit-form" method="post">
+                    <form action="[Your Form Action URL]" method="post">
                         <input type="text" name="name" placeholder="Enter your name" required>
                         <input type="email" name="email" placeholder="Enter your email" required>
                         <textarea name="message" rows="4" placeholder="Enter your message" required></textarea>
                         <button type="submit">Submit</button>
                     </form>
-                </div>
-            </div>
-
-            <div class="rightPanel">
-                <!-- Contact Information -->
-                <div class="item">
-                    <h2>CONTACT</h2>
-                    <div class="contactInfo">
-                        <div class="smallText">
-                            <p>Email: egsutton212@gmail.com</p>
-                            <p>Phone: (980) 297-2714</p>
-                        </div>
-                        <div class="linkedin">
-                            <a href="https://www.linkedin.com/in/emma-sutton-275a0722b/" target="_blank">
-                                <i class="fa fa-linkedin"></i> LinkedIn Profile
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Download Button -->
-                <div class="item">
-                    <a href="CV_Sutton.docx.pdf" class="downloadButton" download>Download CV</a>
                 </div>
             </div>
         </div>
