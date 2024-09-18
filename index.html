@@ -3,16 +3,15 @@
 <head>
     <style>
         body {
-            background: #f5f5f5; /* Light grey background */
+            background: rgb(10, 42, 88); 
             width: 21cm;
             height: auto;
             margin: 0 auto;
-            font-family: 'Open Sans', sans-serif; /* Modern font */
-            color: #333; /* Dark grey text for better readability */
+            font-family: 'Times New Roman', Times, serif; /* Serif font */
         }
 
         page {
-            background: #fff; /* White background */
+            background: rgb(221, 217, 202);
             display: block;
             margin: 0 auto;
             position: relative;
@@ -34,7 +33,6 @@
             display: flex;
             width: 100%;
             flex-wrap: wrap; /* Allow content to wrap */
-            gap: 20px; /* Add gap between panels */
         }
 
         .leftPanel, .rightPanel {
@@ -56,7 +54,7 @@
         }
 
         .bottomLineSeparator {
-            border-bottom: 2px solid #007BFF; /* Blue border */
+            border-bottom: 2px solid #000;
             padding-bottom: 10px;
         }
 
@@ -76,7 +74,6 @@
 
         .educationItem h3 {
             margin: 0;
-            font-size: 18px;
         }
 
         .educationDetails, .experienceDetails {
@@ -85,7 +82,6 @@
 
         .experienceItem h3 {
             margin: 0;
-            font-size: 18px;
         }
 
         .experienceItem strong {
@@ -114,33 +110,34 @@
             align-items: center;
             justify-content: center;
             margin: 0 auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add drop shadow */
         }
 
         .imageContainer img {
             width: 100%;
             height: auto;
+            position: absolute;
+            top: -0.25in;
         }
 
         .nameAndTitle {
             text-align: center;
             margin: 20px auto;
-            border: 2px solid #007BFF; /* Blue border */
-            padding: 10px;
-            background-color: #fff; /* White background */
-            border-radius: 8px;
-            width: calc(100% - 40px);
+            border: 2px solid rgb(10, 42, 88); /* Blue border */
+            padding: 10px; /* Padding around the text */
+            background-color: rgb(221, 217, 202); /* White background */
+            border-radius: 8px; /* Rounded corners */
+            width: calc(100% - 40px); /* Full width minus padding */
         }
 
         .nameAndTitle h1 {
-            color: #007BFF; /* Blue text */
+            color: rgb(43, 71, 131); /* Matches background color */
             margin: 0;
-            font-size: 24px;
         }
 
         .nameAndTitle h2 {
             font-style: italic;
             margin: 0;
-            font-size: 18px;
         }
 
         .jobTitle {
@@ -176,8 +173,6 @@
             text-decoration: none;
             border-radius: 5px;
             text-align: center;
-            font-size: 14px;
-            margin: 10px;
         }
 
         .downloadButton:hover {
@@ -222,7 +217,6 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
-            font-size: 14px;
         }
 
         form button:hover {
@@ -235,10 +229,74 @@
             align-items: center;
             margin-top: 20px;
         }
+
+        .centeredWrapper .downloadButton,
+        .centeredWrapper form {
+            margin: 10px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .leftPanel, .rightPanel {
+                width: 100%;
+                padding: 10px;
+            }
+
+            .nameAndTitle {
+                width: calc(100% - 20px);
+                padding: 8px;
+            }
+
+            .bottomLineSeparator {
+                border-bottom: 1px solid #000;
+                padding-bottom: 8px;
+            }
+
+            .smallText {
+                font-size: 12px;
+            }
+
+            .downloadButton, form button {
+                padding: 8px 16px;
+            }
+
+            .linkedin a {
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nameAndTitle {
+                width: calc(100% - 20px);
+                padding: 6px;
+            }
+
+            .bottomLineSeparator {
+                border-bottom: 1px solid #000;
+                padding-bottom: 6px;
+            }
+
+            .smallText {
+                font-size: 10px;
+            }
+
+            .downloadButton, form button {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+
+            .linkedin a {
+                font-size: 10px;
+            }
+        }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
@@ -285,13 +343,9 @@
                 <!-- Activities Section -->
                 <div class="item bottomLineSeparator">
                     <h2>ACTIVITIES</h2>
-                    <div class="activitiesItem">
-                        <h3><strong>Disability Advocates for Carolina</strong></h3>
-                        <span>Treasurer, Fall 2024 - May 2025</span>
-                    </div>
-                    <div class="activitiesItem">
-                        <h3><strong>Carolina Women in Business</strong></h3>
-                        <span>Mentor and Member, Fall 2021 - May 2025</span>
+                    <div class="smallText">
+                        <p><strong>Disability Advocates for Carolina</strong>, Treasurer, Fall 2024 - May 2025</p>
+                        <p><strong>Carolina Women in Business</strong>, Mentor and Member, Fall 2021 - May 2025</p>
                     </div>
                 </div>
             </div>
@@ -323,44 +377,30 @@
                         <p class="dates">Sept 2022 - May 2025</p>
                         <div class="experienceDetails">
                             <ul>
-                                <li>Managed graduation requirements for over 15,000 undergraduate students, ensuring accurate record keeping.</li>
-                                <li>Organized programming events for voting advocacy, enhancing student engagement.</li>
-                                <li>Coordinated with 800 on campus, student-run organizations for constitution reregistration.</li>
-                                <li>Oversaw campus-wide website, HeelLife, to approve student forms and on-campus events, streamlining administrative processes.</li>
+                                <li>Coordinated campus events and activities for students</li>
+                                <li>Managed event logistics and budget</li>
+                                <li>Worked with student organizations to facilitate collaboration</li>
                             </ul>
                         </div>
                     </div>
 
-                    <div class="experienceItem">
-                        <h3 class="jobTitle"><strong>LabCorps Intern</strong></h3>
-                        <p class="location">United Way of Franklin County, Franklinton, NC</p>
-                        <p class="dates">May 2024 - Aug 2024</p>
-                        <div class="experienceDetails">
-                            <ul>
-                                <li>Created a functional bookings calendar and working inventory for the Innovation Mobile Lab, improving operational efficiency.</li>
-                                <li>Facilitated STEM-related activities and events geared towards middle school students in underserved areas, promoting educational equity.</li>
-                                <li>Worked with potential donors in meetings and grant-writing, securing funding for community programs.</li>
-                            </ul>
-                        </div>
-                    </div>
+                    <!-- Add more experience items as needed -->
                 </div>
             </div>
         </div>
 
-        <!-- Centered Wrapper for Download CV and Contact Form -->
+        <!-- Contact Form Section -->
         <div class="centeredWrapper">
-            <a href="CV_Sutton.docx.pdf" class="downloadButton" download>Download CV</a>
+            <h2>Questions for me?</h2>
+            <form action="YOUR_FORM_ACTION_URL" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
 
-            <!-- Contact Form -->
-            <div class="item">
-                <h2>Questions for me?</h2>
-                <form action="mailto:egsutton212@gmail.com" method="post" enctype="text/plain">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
-                    <button type="submit">Send</button>
-                </form>
-            </div>
+            <!-- Download Button -->
+            <a href="CV_Sutton.docx.pdf" class="downloadButton" download>Download Resume</a>
         </div>
     </page>
 </body>
