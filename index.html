@@ -44,7 +44,7 @@
             width: 50%;
             padding: 20px;
             box-sizing: border-box;
-            text-align: left; /* Left align content in the right panel */
+            text-align: left;
         }
 
         .item {
@@ -64,15 +64,6 @@
             margin-right: 10px;
         }
 
-        .alignright {
-            margin-left: auto;
-        }
-
-        .yearsOfExperience {
-            display: flex;
-            justify-content: space-between;
-        }
-
         .educationItem, .experienceItem {
             display: flex;
             flex-direction: column;
@@ -83,76 +74,72 @@
             margin: 0;
         }
 
-        .educationDetails, .experienceDetails, .activitiesDetails {
+        .educationDetails, .experienceDetails {
             margin-top: 5px;
         }
 
-        .experienceItem h3, .activitiesItem h3 {
+        .experienceItem h3 {
             margin: 0;
         }
 
-        .experienceItem strong, .activitiesItem strong {
+        .experienceItem strong {
             font-size: 14px;
         }
 
-        .lastParagrafNoMarginBottom {
-            margin-bottom: 0;
-        }
-
         .rightPanel h1 {
-            text-align: left; /* Left align text in the right panel */
+            text-align: left;
         }
 
         .rightPanel h3 {
-            text-align: left; /* Left align text in the right panel */
+            text-align: left;
         }
 
         .rightPanel .infoScience {
-            font-size: 14px; /* Smaller font size */
-            font-style: italic; /* Italicized text */
+            font-size: 14px;
+            font-style: italic;
         }
 
         .rightPanel .imageContainer {
-            width: 1.5in; /* Set width to 1.5 inches */
-            height: 1.5in; /* Set height to 1.5 inches */
-            overflow: hidden; /* Hide overflowed content */
+            width: 1.5in;
+            height: 1.5in;
+            overflow: hidden;
             position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto; /* Center the image container */
+            margin: 0 auto;
         }
 
         .rightPanel img {
             width: 100%;
             height: auto;
             position: absolute;
-            top: -0.25in; /* Adjust top position to crop from the top */
+            top: -0.25in;
         }
 
         .jobTitle {
-            font-size: 18px; /* Largest font size for job title */
-            margin: 0; /* Remove default margin */
+            font-size: 18px;
+            margin: 0;
         }
 
         .location {
-            font-size: 14px; /* Smaller font size for location */
-            margin: 0; /* Remove default margin */
+            font-size: 14px;
+            margin: 0;
         }
 
         .dates {
-            font-size: 12px; /* Smaller font size for dates */
-            font-style: italic; /* Italicize dates */
-            margin: 0; /* Remove default margin */
+            font-size: 12px;
+            font-style: italic;
+            margin: 0;
         }
 
         .experienceDetails ul {
-            padding-left: 20px; /* Indent list items */
-            margin-top: 5px; /* Space between dates and list */
+            padding-left: 20px;
+            margin-top: 5px;
         }
 
         .experienceDetails li {
-            margin-bottom: 5px; /* Space between list items */
+            margin-bottom: 5px;
         }
 
         .downloadButton {
@@ -167,7 +154,7 @@
         }
 
         .linkedin {
-            margin-top: 20px;
+            margin-top: 10px;
         }
 
         .linkedin a {
@@ -219,6 +206,41 @@
                 <h3>University of North Carolina at Chapel Hill</h3>
                 <h3 class="infoScience"><i>Information Science, Data Science Concentration</i></h3>
 
+                <!-- Education Section -->
+                <div class="item bottomLineSeparator">
+                    <h2>EDUCATION</h2>
+                    <div class="educationItem">
+                        <h3>University of North Carolina at Chapel Hill</h3>
+                        <p class="dates">August 2021 - May 2025</p>
+                        <p class="educationDetails">B.S. in Information Science, Data Science Concentration</p>
+                        <p class="educationDetails">Related Coursework: Python, R, Website Design, Database Management</p>
+                    </div>
+                    <div class="educationItem">
+                        <h3>Clemson University Graduate School</h3>
+                        <p class="dates">May 2025 - May 2027</p>
+                        <p class="educationDetails">Master of Science in Computer Science</p>
+                    </div>
+                </div>
+
+                <!-- Bottom Line Separator After Education -->
+                <div class="bottomLineSeparator"></div>
+
+                <!-- Skills Section -->
+                <div class="item bottomLineSeparator">
+                    <h2>SKILLS</h2>
+                    <div class="smallText">
+                        <ul>
+                            <li>Data Analysis</li>
+                            <li>Programming</li>
+                            <li>Database Management</li>
+                            <li>Communication</li>
+                            <li>R and RStudio</li>
+                            <li>Python and PyCharm</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience Section -->
                 <div class="item bottomLineSeparator">
                     <h2>EXPERIENCE</h2>
 
@@ -250,6 +272,7 @@
                     </div>
                 </div>
 
+                <!-- Activities Section -->
                 <div class="item bottomLineSeparator">
                     <h2>ACTIVITIES</h2>
                     <div class="activitiesItem">
@@ -261,58 +284,39 @@
                         <span>Mentor and Member, Fall 2021 - May 2025</span>
                     </div>
                 </div>
+
+                <!-- Contact Form Section -->
+                <div class="item bottomLineSeparator">
+                    <h2>Questions for me?</h2>
+                    <form action="/submit-form" method="post">
+                        <input type="text" name="name" placeholder="Enter your name" required>
+                        <input type="email" name="email" placeholder="Enter your email" required>
+                        <textarea name="message" rows="4" placeholder="Enter your message" required></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
             </div>
 
             <div class="rightPanel">
-                <div class="imageContainer">
-                    <img src="IMG_3872.jpg" alt="Emma Sutton"/>
-                </div>
-                <div class="details">
-                    <div class="item bottomLineSeparator">
-                        <h2>CONTACT</h2>
+                <!-- Contact Information -->
+                <div class="item">
+                    <h2>CONTACT</h2>
+                    <div class="contactInfo">
                         <div class="smallText">
-                            <p><i class="fa fa-phone contactIcon" aria-hidden="true"></i> (980) 297-2714</p>
-                            <p><i class="fa fa-envelope contactIcon" aria-hidden="true"></i> <a href="mailto:egsutton212@gmail">egsutton212@gmail.com</a></p>
+                            <p>Email: egs@ad.unc.edu</p>
+                            <p>Phone: [Your Phone Number]</p>
                         </div>
                         <div class="linkedin">
                             <a href="https://www.linkedin.com/in/emma-sutton-275a0722b/" target="_blank">
-                                <i class="fa fa-linkedin-square"></i>Connect on LinkedIn
+                                <i class="fa fa-linkedin"></i> LinkedIn Profile
                             </a>
                         </div>
-
-                        <!-- Contact Form -->
-                        <form action="/submit-form" method="post">
-                            <input type="text" name="name" placeholder="Your Name" required>
-                            <input type="email" name="email" placeholder="Your Email" required>
-                            <textarea name="message" placeholder="Your Message" required></textarea>
-                            <button type="submit">Send Message</button>
-                        </form>
                     </div>
                 </div>
 
+                <!-- Download Button -->
                 <div class="item">
-                    <h2>EDUCATION</h2>
-                    <div class="educationItem">
-                        <h3>University of North Carolina at Chapel Hill</h3>
-                        <span>Chapel Hill, NC</span>
-                        <div class="educationDetails smallText">
-                            <p>Bachelor of Science in <i>Information Science, Data Science Concentration</i></p>
-                            <p>Expected Graduation: May 2025</p>
-                        </div>
-                    </div>
-
-                    <!-- Added Clemson University -->
-                    <div class="educationItem">
-                        <h3>Clemson University Graduate School</h3>
-                        <span>Greenville, SC</span>
-                        <div class="educationDetails smallText">
-                            <p>Master of Science in Computer Science</p>
-                            <p>Expected Graduation: May 2027</p>
-                        </div>
-                    </div>
-
-                    <!-- Download Resume Button -->
-                    <a class="downloadButton" href="path-to-your-resume-file" download>Download Resume</a>
+                    <a href="[Your File Download Link]" class="downloadButton" download>Download My Resume</a>
                 </div>
             </div>
         </div>
