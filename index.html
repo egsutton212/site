@@ -75,6 +75,7 @@
 
         .educationItem, .experienceItem {
             display: flex;
+            flex-direction: column;
             justify-content: space-between;
         }
 
@@ -126,6 +127,31 @@
             height: auto;
             position: absolute;
             top: -0.25in; /* Adjust top position to crop from the top */
+        }
+
+        .jobTitle {
+            font-size: 18px; /* Largest font size for job title */
+            margin: 0; /* Remove default margin */
+        }
+
+        .location {
+            font-size: 14px; /* Smaller font size for location */
+            margin: 0; /* Remove default margin */
+        }
+
+        .dates {
+            font-size: 12px; /* Smaller font size for dates */
+            font-style: italic; /* Italicize dates */
+            margin: 0; /* Remove default margin */
+        }
+
+        .experienceDetails ul {
+            padding-left: 20px; /* Indent list items */
+            margin-top: 5px; /* Space between dates and list */
+        }
+
+        .experienceDetails li {
+            margin-bottom: 5px; /* Space between list items */
         }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -190,47 +216,45 @@
                     <h3 class="infoScience">Information Science, Data Science Concentration</h3>
                     <div class="item">
                         <div class="item bottomLineSeparator">
-<h2>EXPERIENCE</h2>
+                            <h2>EXPERIENCE</h2>
 
-<div class="experienceItem">
-    <div class="jobTitle">
-        <h3><strong>Campus Life Coordinator</strong></h3>
-        <p class="location">Carolina Union, Chapel Hill, NC</p>
-    </div>
-    <span class="dates">Sept 2022 - May 2025</span>
-    <div class="experienceDetails smallText">
-        <ul>
-            <li>Managed graduation requirements for over 15,000 undergraduate students, ensuring accurate record keeping.</li>
-            <li>Organized programming events for voting advocacy initiatives and leadership bootcamps, enhancing student engagement.</li>
-            <li>Coordinated with over 800 on-campus, student-run organizations for constitution review and re-registration.</li>
-            <li>Oversaw the campus-wide website, HeelLife, to approve student forms and events, streamlining administrative processes.</li>
-        </ul>
-    </div>
-</div>
+                            <div class="experienceItem">
+                                <h3 class="jobTitle"><strong>Campus Life Coordinator</strong></h3>
+                                <p class="location">Carolina Union, Chapel Hill, NC</p>
+                                <p class="dates">Sept 2022 - May 2025</p>
+                                <div class="experienceDetails smallText">
+                                    <ul>
+                                        <li>Managed graduation requirements for over 15,000 undergraduate students, ensuring accurate record keeping.</li>
+                                        <li>Organized programming events for voting advocacy initiatives and leadership bootcamps, enhancing student engagement.</li>
+                                        <li>Coordinated with over 800 on-campus, student-run organizations for constitution review and re-registration.</li>
+                                        <li>Oversaw the campus-wide website, HeelLife, to approve student forms and events, streamlining administrative processes.</li>
+                                    </ul>
+                                </div>
+                            </div>
 
-<div class="experienceItem">
-    <div class="jobTitle">
-        <h3><strong>LabCorps Intern</strong></h3>
-        <p class="location">United Way of Franklin County, Franklinton, NC</p>
-    </div>
-    <span class="dates">May 2024 - Aug 2024</span>
-    <div class="experienceDetails smallText">
-        <ul>
-            <li>Created a functional bookings calendar and working inventory for the Innovation Mobile Lab, improving operational efficiency.</li>
-            <li>Facilitated STEM-related activities and events for middle school students in underserved areas to promote educational equity.</li>
-            <li>Worked with potential donors in meetings and grant-writing, securing funding for community programs.</li>
-        </ul>
-    </div>
-</div> 
-                    <div class="item bottomLineSeparator">
-                        <h2>ACTIVITIES</h2>
-                        <div class="activitiesItem">
-                            <h3><strong>Disability Advocates for Carolina</strong></h3>
-                            <span>Treasurer, Fall 2024 - May 2025</span>
+                            <div class="experienceItem">
+                                <h3 class="jobTitle"><strong>LabCorps Intern</strong></h3>
+                                <p class="location">United Way of Franklin County, Franklinton, NC</p>
+                                <p class="dates">May 2024 - Aug 2024</p>
+                                <div class="experienceDetails smallText">
+                                    <ul>
+                                        <li>Created a functional bookings calendar and working inventory for the Innovation Mobile Lab, improving operational efficiency.</li>
+                                        <li>Facilitated STEM-related activities and events for middle school students in underserved areas to promote educational equity.</li>
+                                        <li>Worked with potential donors in meetings and grant-writing, securing funding for community programs.</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <div class="activitiesItem">
-                            <h3><strong>Carolina Women in Business</strong></h3>
-                            <span>Mentor and Member, Fall 2021 - May 2025</span>
+                        <div class="item bottomLineSeparator">
+                            <h2>ACTIVITIES</h2>
+                            <div class="activitiesItem">
+                                <h3><strong>Disability Advocates for Carolina</strong></h3>
+                                <span>Treasurer, Fall 2024 - May 2025</span>
+                            </div>
+                            <div class="activitiesItem">
+                                <h3><strong>Carolina Women in Business</strong></h3>
+                                <span>Mentor and Member, Fall 2021 - May 2025</span>
+                            </div>
                         </div>
                     </div>
                 </div>
