@@ -70,7 +70,7 @@
             justify-content: space-between;
         }
 
-        .educationItem h3, .experienceItem h3 {
+        .educationItem h3 {
             margin: 0;
         }
 
@@ -78,11 +78,19 @@
             margin-top: 5px;
         }
 
+        .experienceItem h3 {
+            margin: 0;
+        }
+
         .experienceItem strong {
             font-size: 14px;
         }
 
-        .rightPanel h1, .rightPanel h3 {
+        .rightPanel h1 {
+            text-align: left;
+        }
+
+        .rightPanel h3 {
             text-align: left;
         }
 
@@ -137,12 +145,15 @@
         .downloadButton {
             display: inline-block;
             padding: 10px 20px;
-            margin-top: 10px;
             background-color: #007BFF;
             color: white;
             text-decoration: none;
             border-radius: 5px;
             text-align: center;
+        }
+
+        .downloadButton:hover {
+            background-color: #0056b3;
         }
 
         .linkedin {
@@ -184,6 +195,37 @@
             border-radius: 4px;
             cursor: pointer;
         }
+
+        form button:hover {
+            background-color: #0056b3;
+        }
+
+        .centeredWrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .centeredWrapper .downloadButton,
+        .centeredWrapper form {
+            margin: 10px;
+        }
+
+        .nameAndTitle {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .nameAndTitle h1 {
+            color: rgb(43, 71, 131); /* Matches background color */
+            margin: 0;
+        }
+
+        .nameAndTitle h2 {
+            font-style: italic;
+            margin: 0;
+        }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -206,7 +248,6 @@
                         <h3>University of North Carolina at Chapel Hill</h3>
                         <p class="dates">August 2021 - May 2025</p>
                         <p class="educationDetails">B.S. in Information Science, Data Science Concentration</p>
-                        <p class="educationDetails">Related Coursework: Python, R, Website Design, Database Management</p>
                     </div>
                     <div class="educationItem">
                         <h3>Clemson University Graduate School</h3>
@@ -272,6 +313,7 @@
                 <!-- Experience Section -->
                 <div class="item bottomLineSeparator">
                     <h2>EXPERIENCE</h2>
+
                     <div class="experienceItem">
                         <h3 class="jobTitle"><strong>Campus Life Coordinator</strong></h3>
                         <p class="location">Carolina Union, Chapel Hill, NC</p>
@@ -279,30 +321,41 @@
                         <div class="experienceDetails smallText">
                             <ul>
                                 <li>Managed graduation requirements for over 15,000 undergraduate students, ensuring accurate record keeping.</li>
-                                <li>Organized programming events for voting advocacy initiatives and leadership bootcamps, enhancing student engagement.</li>
-                                <li>Coordinated with over 800 on-campus, student-run organizations for constitution review and re-registration.</li>
-                                <li>Oversaw the campus-wide website, HeelLife, to approve student forms and events, streamlining administrative processes.</li>
+                                <li>Organized programming events for voting advocacy, resulting in a 10% increase in student voter participation.</li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="experienceItem">
-                        <h3 class="jobTitle"><strong>LabCorps Intern</strong></h3>
-                        <p class="location">United Way of Franklin County, Franklinton, NC</p>
-                        <p class="dates">May 2024 - Aug 2024</p>
+                        <h3 class="jobTitle"><strong>Teaching Assistant</strong></h3>
+                        <p class="location">University of North Carolina at Chapel Hill, Chapel Hill, NC</p>
+                        <p class="dates">Jan 2024 - Present</p>
                         <div class="experienceDetails smallText">
                             <ul>
-                                <li>Developed marketing strategies to promote a community-driven project, increasing local engagement by 30%.</li>
-                                <li>Utilized social media analytics tools to track and report campaign performance, providing actionable insights for improvement.</li>
-                                <li>Collaborated with a team to design and execute outreach programs aimed at increasing volunteer participation.</li>
+                                <li>Assisted in grading and providing feedback on assignments for the Data Science course.</li>
+                                <li>Led review sessions to clarify complex topics, increasing student understanding by 20%.</li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Download Button -->
-        <a href="CV_Sutton.docx.pdf" class="downloadButton" download>Download Resume</a>
+
+        <!-- Centered Wrapper for Download CV and Contact Form -->
+        <div class="centeredWrapper">
+            <a href="path/to/your/CV.pdf" class="downloadButton" download>Download CV</a>
+
+            <!-- Contact Form -->
+            <div class="item">
+                <h2>Questions for me?</h2>
+                <form action="mailto:egsutton212@gmail.com" method="post" enctype="text/plain">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
     </page>
 </body>
 </html>
