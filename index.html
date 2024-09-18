@@ -165,6 +165,46 @@
             border-radius: 5px;
             text-align: center;
         }
+
+        .linkedin {
+            margin-top: 20px;
+        }
+
+        .linkedin a {
+            color: #0077B5;
+            text-decoration: none;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+        }
+
+        .linkedin i {
+            margin-right: 10px;
+            font-size: 18px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+
+        form input, form textarea {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        form button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -178,6 +218,7 @@
                 <h1>Emma Sutton</h1>
                 <h3>University of North Carolina at Chapel Hill</h3>
                 <h3 class="infoScience"><i>Information Science, Data Science Concentration</i></h3>
+
                 <div class="item bottomLineSeparator">
                     <h2>EXPERIENCE</h2>
 
@@ -233,33 +274,45 @@
                             <p><i class="fa fa-phone contactIcon" aria-hidden="true"></i> (980) 297-2714</p>
                             <p><i class="fa fa-envelope contactIcon" aria-hidden="true"></i> <a href="mailto:egsutton212@gmail">egsutton212@gmail.com</a></p>
                         </div>
-                    </div>
+                        <div class="linkedin">
+                            <a href="https://www.linkedin.com/in/emma-sutton-275a0722b/" target="_blank">
+                                <i class="fa fa-linkedin-square"></i>Connect on LinkedIn
+                            </a>
+                        </div>
 
-                    <div class="item bottomLineSeparator">
-                        <h2>EDUCATION</h2>
-                        <div class="educationItem">
-                            <h3>University of North Carolina at Chapel Hill</h3>
-                            <p class="dates">August 2021 - May 2025</p>
-                            <p class="educationDetails">B.S. in Information Science, Data Science Concentration</p>
-                            <p class="educationDetails">Related Coursework: Python, R, Website Design, Database Management</p>
+                        <!-- Contact Form -->
+                        <form action="/submit-form" method="post">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
+                            <textarea name="message" placeholder="Your Message" required></textarea>
+                            <button type="submit">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <h2>EDUCATION</h2>
+                    <div class="educationItem">
+                        <h3>University of North Carolina at Chapel Hill</h3>
+                        <span>Chapel Hill, NC</span>
+                        <div class="educationDetails smallText">
+                            <p>Bachelor of Science in <i>Information Science, Data Science Concentration</i></p>
+                            <p>Expected Graduation: May 2025</p>
                         </div>
                     </div>
 
-                    <div class="item bottomLineSeparator">
-                        <h2>SKILLS</h2>
-                        <div class="smallText">
-                            <ul>
-                                <li>Data Analysis</li>
-                                <li>Programming</li>
-                                <li>Database Management</li>
-                                <li>Communication</li>
-                                <li>R and RStudio</li>
-                                <li>Python and PyCharm</li>
-                            </ul>
+                    <!-- Added Clemson University -->
+                    <div class="educationItem">
+                        <h3>Clemson University Graduate School</h3>
+                        <span>Greenville, SC</span>
+                        <div class="educationDetails smallText">
+                            <p>Master of Science in Computer Science</p>
+                            <p>Expected Graduation: May 2027</p>
                         </div>
                     </div>
 
-                    <a href="CV_Sutton.docx.pdf" class="downloadButton">Download CV</a>
+                    <!-- Download Resume Button -->
+                    <a class="downloadButton" href="path-to-your-resume-file" download>Download Resume</a>
                 </div>
             </div>
         </div>
