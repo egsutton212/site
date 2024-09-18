@@ -164,7 +164,7 @@
         .downloadButton {
             display: inline-block;
             padding: 10px 20px;
-            background-color: rgb(10, 42, 88); /* Matches the background color */
+            background-color: rgb(221, 217, 202); /* Matches the background color */
             color: rgb(10, 42, 88); /* Text color */
             text-decoration: none;
             border-radius: 5px;
@@ -173,7 +173,7 @@
         }
 
         .downloadButton:hover {
-            background-color: rgb(10, 42, 88); /* Matches the background color */
+            background-color: rgb(221, 217, 202); /* Matches the background color */
             color: rgb(10, 42, 88); /* Text color */
         }
 
@@ -198,6 +198,7 @@
             display: flex;
             flex-direction: column;
             margin-top: 20px;
+            width: 100%; /* Full width of the container */
         }
 
         form input, form textarea {
@@ -222,15 +223,14 @@
         }
 
         .centeredWrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 20px;
+            text-align: center; /* Center text and content */
+            margin: 20px 0;
         }
 
         .centeredWrapper .downloadButton,
         .centeredWrapper form {
-            margin: 10px;
+            margin: 10px auto; /* Center the button and form */
+            display: inline-block;
         }
 
         /* Responsive design for mobile devices */
@@ -315,11 +315,11 @@
 
             <!-- Right Panel -->
             <div class="rightPanel">
-                <!-- Contact Section -->
+                <!-- Contact Information -->
                 <div class="item bottomLineSeparator">
                     <h2>CONTACT</h2>
                     <div class="contactInfo">
-                        <div class="smallText">
+                        <div class="contactItem">
                             <p>Email: <a href="mailto:egsutton212@gmail.com">egsutton212@gmail.com</a></p>
                             <p>Phone: (980) 297-2714</p>
                             <div class="linkedin">
