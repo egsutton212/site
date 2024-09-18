@@ -14,6 +14,291 @@
             background: rgba(205, 205, 205, 0.99);
             display: block;
             margin: 0 auto;
+            margin-bottom: 0.5cm;
+            position: relative;
+            padding: 1cm; /* Add padding to make sure content is not against edges */
+            box-sizing: border-box;
+        }
+
+        page[size="A4"] {  
+            width: 21cm;
+            height: auto; 
+        }
+
+        @page {
+            size: 21cm 29.7cm;
+            margin: 0mm;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            height: auto;
+        }
+
+        .leftPanel {
+            width: 50%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .rightPanel {
+            width: 50%;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: left; /* Left align content in the right panel */
+        }
+
+        .item {
+            margin-bottom: 20px;
+        }
+
+        .bottomLineSeparator {
+            border-bottom: 2px solid #000;
+            padding-bottom: 10px;
+        }
+
+        .smallText {
+            font-size: 14px;
+        }
+
+        .contactIcon {
+            margin-right: 10px;
+        }
+
+        .alignright {
+            margin-left: auto;
+        }
+
+        .yearsOfExperience {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .educationItem, .experienceItem {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .educationItem h3 {
+            margin: 0;
+        }
+
+        .educationDetails, .experienceDetails, .activitiesDetails {
+            margin-top: 5px;
+        }
+
+        .experienceItem h3, .activitiesItem h3 {
+            margin: 0;
+        }
+
+        .experienceItem strong, .activitiesItem strong {
+            font-size: 14px;
+        }
+
+        .lastParagrafNoMarginBottom {
+            margin-bottom: 0;
+        }
+
+        .rightPanel h1 {
+            text-align: left; /* Left align text in the right panel */
+        }
+
+        .rightPanel h3 {
+            text-align: left; /* Left align text in the right panel */
+        }
+
+        .rightPanel .infoScience {
+            font-size: 14px; /* Smaller font size */
+            font-style: italic; /* Italicized text */
+        }
+
+        .rightPanel .imageContainer {
+            width: 1.5in; /* Set width to 1.5 inches */
+            height: 1.5in; /* Set height to 1.5 inches */
+            overflow: hidden; /* Hide overflowed content */
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto; /* Center the image container */
+        }
+
+        .rightPanel img {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: -0.25in; /* Adjust top position to crop from the top */
+        }
+
+        .jobTitle {
+            font-size: 18px; /* Largest font size for job title */
+            margin: 0; /* Remove default margin */
+        }
+
+        .location {
+            font-size: 14px; /* Smaller font size for location */
+            margin: 0; /* Remove default margin */
+        }
+
+        .dates {
+            font-size: 12px; /* Smaller font size for dates */
+            font-style: italic; /* Italicize dates */
+            margin: 0; /* Remove default margin */
+        }
+
+        .experienceDetails ul {
+            padding-left: 20px; /* Indent list items */
+            margin-top: 5px; /* Space between dates and list */
+        }
+
+        .experienceDetails li {
+            margin-bottom: 5px; /* Space between list items */
+        }
+
+        .downloadButton {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .contactForm {
+            margin-top: 20px;
+        }
+
+        .contactForm input, .contactForm textarea, .contactForm button {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .contactForm input, .contactForm textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contactForm button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+
+        .contactForm button:hover {
+            background-color: #0056b3;
+        }
+
+        .nameAndTitle {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .nameAndTitle h1 {
+            margin: 0;
+        }
+
+        .nameAndTitle h2 {
+            font-style: italic;
+            margin: 0;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Julius+Sans+One&family=Open+Sans&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+    <page size="A4">
+        <div class="container">
+            <!-- Left Panel -->
+            <div class="leftPanel">
+                <div class="nameAndTitle">
+                    <h1>Emma Sutton</h1>
+                    <h2>Data Science Enthusiast</h2>
+                </div>
+                <div class="item bottomLineSeparator">
+                    <h2>EDUCATION</h2>
+                    <div class="educationItem">
+                        <h3>University of North Carolina at Chapel Hill</h3>
+                        <p class="dates">August 2021 - May 2025</p>
+                        <p class="educationDetails">B.S. in Information Science, Data Science Concentration</p>
+                        <p class="educationDetails">Related Coursework: Python, R, Website Design, Database Management</p>
+                    </div>
+                    <div class="educationItem">
+                        <h3>Clemson University Graduate School</h3>
+                        <p class="dates">May 2025 - May 2027</p>
+                        <p class="educationDetails">Master of Science in Computer Science</p>
+                    </div>
+                </div>
+                <div class="item bottomLineSeparator">
+                    <h2>SKILLS</h2>
+                    <div class="smallText">
+                        <ul>
+                            <li>Data Analysis</li>
+                            <li>Programming</li>
+                            <li>Database Management</li>
+                            <li>Communication</li>
+                            <li>R and RStudio</li>
+                            <li>Python and PyCharm</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item bottomLineSeparator">
+                    <h2>ACTIVITIES</h2>
+                    <div class="activitiesItem">
+                        <h3><strong>Disability Advocates for Carolina</strong></h3>
+                        <span>Treasurer, Fall 2024 - May 2025</span>
+                    </div>
+                    <div class="activitiesItem">
+                        <h3><strong>Carolina Women in Business</strong></h3>
+                        <span>Mentor and Member, Fall 2021 - May 2025</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Panel -->
+            <div class="rightPanel">
+                <div class="imageContainer">
+                    <img src="IMG_3872.jpg" alt="Emma Sutton"/>
+                </div>
+                <div class="details">
+                    <div class="item bottomLineSeparator">
+                        <h2>CONTACT</h2>
+                        <div class="smallText">
+                            <p><i class="fa fa-phone contactIcon" aria-hidden="true"></i> (980) 297-2714</p>
+                            <p><i class="fa fa-envelope contactIcon" aria-hidden="true"></i> <a href="mailto:egsutton212@gmail">egsutton212@gmail.com</a></p>
+                            <p><i class="fa fa-linkedin contactIcon" aria-hidden="true"></i> <a href="https://www.linkedin.com/in/emma-sutton-275a0722b/" target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="item bottomLineSeparator">
+                        <h2>EXPERIENCE</h2>
+
+                        <div
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background: rgb(43, 71, 131); 
+            width: 21cm;
+            height: auto;
+            margin: 0 auto;
+            font-family: 'Times New Roman', Times, serif; 
+        }
+
+        page {
+            background: rgba(205, 205, 205, 0.99);
+            display: block;
+            margin: 0 auto;
             position: relative;
             padding: 20px;
             box-sizing: border-box;
@@ -199,9 +484,14 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
-    <page size="A4">
+     <page size="A4">
         <div class="container">
+            <!-- Left Panel -->
             <div class="leftPanel">
+                <div class="nameAndTitle">
+                    <h1>Emma Sutton</h1>
+                    <h2>Data Science Enthusiast</h2>
+                </div>
                 <!-- Education Section -->
                 <div class="item bottomLineSeparator">
                     <h2>EDUCATION</h2>
