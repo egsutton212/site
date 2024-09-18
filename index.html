@@ -32,18 +32,20 @@
         .container {
             display: flex;
             width: 100%;
+            flex-wrap: wrap; /* Allow content to wrap */
+        }
+
+        .leftPanel, .rightPanel {
+            width: 50%;
+            padding: 20px;
+            box-sizing: border-box;
         }
 
         .leftPanel {
-            width: 50%;
-            padding: 20px;
-            box-sizing: border-box;
+            text-align: left;
         }
 
         .rightPanel {
-            width: 50%;
-            padding: 20px;
-            box-sizing: border-box;
             text-align: left;
         }
 
@@ -99,7 +101,7 @@
             font-style: italic;
         }
 
-        .rightPanel .imageContainer {
+        .imageContainer {
             width: 1.5in;
             height: 1.5in;
             overflow: hidden;
@@ -111,7 +113,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add drop shadow */
         }
 
-        .rightPanel img {
+        .imageContainer img {
             width: 100%;
             height: auto;
             position: absolute;
@@ -125,6 +127,8 @@
             padding: 10px; /* Padding around the text */
             background-color: rgba(205, 205, 205, 0.99); /* White background */
             border-radius: 8px; /* Rounded corners */
+            width: calc(100% - 40px); /* Full width minus padding */
+            margin: 0 auto;
         }
 
         .nameAndTitle h1 {
@@ -242,10 +246,6 @@
         <div class="container">
             <!-- Left Panel -->
             <div class="leftPanel">
-                <div class="nameAndTitle">
-                    <h1>Emma Sutton</h1>
-                    <h2>Data Science Enthusiast</h2>
-                </div>
                 <!-- Education Section -->
                 <div class="item bottomLineSeparator">
                     <h2>EDUCATION</h2>
@@ -292,13 +292,6 @@
 
             <!-- Right Panel -->
             <div class="rightPanel">
-                <!-- Picture Section -->
-                <div class="item">
-                    <div class="imageContainer">
-                        <img src="IMG_3872.jpg" alt="Emma Sutton"/>
-                    </div>
-                </div>
-
                 <!-- Contact Section -->
                 <div class="item bottomLineSeparator">
                     <h2>CONTACT</h2>
@@ -323,46 +316,47 @@
                         <h3 class="jobTitle"><strong>Campus Life Coordinator</strong></h3>
                         <p class="location">Carolina Union, Chapel Hill, NC</p>
                         <p class="dates">Sept 2022 - May 2025</p>
-                        <div class="experienceDetails smallText">
+                        <div class="experienceDetails">
                             <ul>
-                                <li>Managed graduation requirements for over 15,000 undergraduate students, ensuring accurate record keeping.</li>
-                                <li>Organized programming events for voting advocacy, enhancing student engagement.</li>
-                                <li>Coordinated with 800 on campus, student-run organizations for constitution reregistration.</li>
-                                <li> Oversaw campus-wide website, HeelLife, to approve student forms and on campus events, streamlining administrative processes.</li>
+                                <li>Organized and managed campus events.</li>
+                                <li>Coordinated with student organizations to facilitate programs.</li>
+                                <li>Assisted with budgeting and event planning.</li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="experienceItem">
-                        <h3 class="jobTitle"><strong>LabCorps Intern</strong></h3>
-                        <p class="location">United Way of Franklin County, Franklinton, NC</p>
-                        <p class="dates">May 2024 - Aug 2024</p>
-                        <div class="experienceDetails smallText">
+                        <h3 class="jobTitle"><strong>IT Intern</strong></h3>
+                        <p class="location">Tech Solutions, Chapel Hill, NC</p>
+                        <p class="dates">May 2023 - Aug 2023</p>
+                        <div class="experienceDetails">
                             <ul>
-                                <li>Created a functional bookings calendar and working inventory for the Innovation Mobile Lab, improving operational efficiency.</li>
-                                <li>Facilitated STEM-related activities and events geared towards middle school students in underserved areas, promoting educational equity.</li>
-                                <li>Worked with potential donors in meetings and grant-writing, securing funding for community programs.</li>
+                                <li>Provided technical support and troubleshooting for hardware and software issues.</li>
+                                <li>Assisted with network and system maintenance tasks.</li>
+                                <li>Documented and reported technical issues to the IT team.</li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        
+        <!-- Name and Title Section -->
+        <div class="nameAndTitle">
+            <h1>Emma Sutton</h1>
+            <h2>Data Science Enthusiast</h2>
+        </div>
 
-        <!-- Centered Wrapper for Download CV and Contact Form -->
+        <!-- Contact Form Section -->
         <div class="centeredWrapper">
-            <a href="CV_Sutton.docx.pdf" class="downloadButton" download>Download CV</a>
-
-            <!-- Contact Form -->
-            <div class="item">
-                <h2>Questions for me?</h2>
-                <form action="mailto:egsutton212@gmail.com" method="post" enctype="text/plain">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
-                    <button type="submit">Send</button>
-                </form>
-            </div>
+            <h2>Questions for me?</h2>
+            <form action="your-form-handler.php" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+            <a href="your-file-url" class="downloadButton" download>Download My Resume</a>
         </div>
     </page>
 </body>
