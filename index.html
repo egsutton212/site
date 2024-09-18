@@ -1,46 +1,388 @@
-            <!-- Experience Section -->
-            <div class="item bottomLineSeparator">
-                <h2>EXPERIENCE</h2>
-                <div class="experienceItem">
-                    <h3 class="jobTitle"><strong>Campus Life Coordinator</strong></h3>
-                    <p class="location">Carolina Union, Chapel Hill, NC</p>
-                    <p class="dates">Sept 2022 - May 2025</p>
-                    <div class="experienceDetails">
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background: rgb(10, 42, 88); 
+            width: 21cm;
+            height: auto;
+            margin: 0 auto;
+            font-family: 'Times New Roman', Times, serif; 
+        }
+
+        page {
+            background: rgb(221, 217, 202);
+            display: block;
+            margin: 0 auto;
+            position: relative;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        page[size="A4"] {  
+            width: 21cm;
+            height: auto; 
+        }
+
+        @page {
+            size: 21cm auto;
+            margin: 0mm;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap; /* Allow content to wrap */
+        }
+
+        .leftPanel, .rightPanel {
+            width: 50%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .leftPanel {
+            text-align: left;
+        }
+
+        .rightPanel {
+            text-align: left;
+        }
+
+        .item {
+            margin-bottom: 20px;
+        }
+
+        .bottomLineSeparator {
+            border-bottom: 2px solid #000;
+            padding-bottom: 10px;
+        }
+
+        .smallText {
+            font-size: 14px;
+        }
+
+        .contactIcon {
+            margin-right: 10px;
+        }
+
+        .educationItem, .experienceItem, .activitiesItem {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .educationItem h3, .experienceItem h3, .activitiesItem h3 {
+            margin: 0;
+        }
+
+        .educationDetails, .experienceDetails, .activitiesItem span {
+            margin-top: 5px;
+        }
+
+        .experienceItem strong {
+            font-size: 14px;
+        }
+
+        .rightPanel h1 {
+            text-align: left;
+        }
+
+        .rightPanel h3 {
+            text-align: left;
+        }
+
+        .rightPanel .infoScience {
+            font-size: 14px;
+            font-style: italic;
+        }
+
+        .imageContainer {
+            width: 1.5in;
+            height: 1.5in;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add drop shadow */
+        }
+
+        .imageContainer img {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: -0.25in;
+        }
+
+        .nameAndTitle {
+            text-align: center;
+            margin: 20px auto;
+            border: 2px solid rgb(10, 42, 88); /* Blue border */
+            padding: 10px; /* Padding around the text */
+            background-color: rgb(221, 217, 202); /* White background */
+            border-radius: 8px; /* Rounded corners */
+            width: calc(100% - 40px); /* Full width minus padding */
+        }
+
+        .nameAndTitle h1 {
+            color: rgb(43, 71, 131); /* Matches background color */
+            margin: 0;
+        }
+
+        .nameAndTitle h2 {
+            font-style: italic;
+            margin: 0;
+        }
+
+        .jobTitle {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .location {
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .dates {
+            font-size: 12px;
+            font-style: italic;
+            margin: 0;
+        }
+
+        .experienceDetails ul {
+            padding-left: 20px;
+            margin-top: 5px;
+        }
+
+        .experienceDetails li {
+            margin-bottom: 5px;
+        }
+
+        .rightPanel h2 {
+            margin-top: 0;
+        }
+
+        .downloadButton {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: rgb(10, 42, 88);
+            color: rgb(221, 217, 202);
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            border: none;
+            font-size: 14px;
+        }
+
+        .downloadButton:hover {
+            background-color: rgb(10, 42, 88);
+            color: rgb(221, 217, 202);
+        }
+
+        .linkedin {
+            margin-top: 10px;
+        }
+
+        .linkedin a {
+            color: #0077B5;
+            text-decoration: none;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+        }
+
+        .linkedin i {
+            margin-right: 10px;
+            font-size: 18px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+            max-width: 600px; /* Set a max-width for the form */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        form input, form textarea {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        form button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #0056b3;
+        }
+
+        .centeredWrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center; /* Center text in the wrapper */
+        }
+
+        .centeredWrapper .downloadButton,
+        .centeredWrapper form {
+            margin: 10px;
+        }
+
+        /* Responsive design for mobile devices */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .leftPanel, .rightPanel {
+                width: 100%;
+                padding: 10px;
+            }
+
+            .nameAndTitle {
+                width: calc(100% - 20px);
+            }
+
+            .downloadButton {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Julius+Sans+One&family=Open+Sans&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+    <page size="A4">
+        <!-- Name and Title Section -->
+        <div class="nameAndTitle">
+            <h1>Emma Sutton</h1>
+        </div>
+
+        <div class="container">
+            <!-- Left Panel -->
+            <div class="leftPanel">
+                <!-- Education Section -->
+                <div class="item bottomLineSeparator">
+                    <h2>EDUCATION</h2>
+                    <div class="educationItem">
+                        <h3>University of North Carolina at Chapel Hill</h3>
+                        <p class="dates">August 2021 - May 2025</p>
+                        <p class="educationDetails">B.S. in Information Science, Data Science Concentration</p>
+                    </div>
+                    <div class="educationItem">
+                        <h3>Clemson University Graduate School</h3>
+                        <p class="dates">May 2025 - May 2027</p>
+                        <p class="educationDetails">Master of Science in Computer Science</p>
+                    </div>
+                </div>
+
+                <!-- Skills Section -->
+                <div class="item bottomLineSeparator">
+                    <h2>SKILLS</h2>
+                    <div class="smallText">
                         <ul>
-                            <li>Managed graduation requirements for over 15,000 undergraduate students, ensuring accurate record keeping.</li>
-                            <li>Organized programming events for voting advocacy, enhancing student engagement.</li>
-                            <li>Coordinated with 800 on campus, student-run organizations for constitution reregistration.</li>
-                            <li>Oversaw campus-wide website, HeelLife, to approve student forms and on campus events, streamlining administrative processes.</li>
+                            <li>Data Analysis</li>
+                            <li>Programming</li>
+                            <li>Database Management</li>
+                            <li>Communication</li>
+                            <li>R and RStudio</li>
+                            <li>Python and PyCharm</li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="experienceItem">
-                    <h3 class="jobTitle"><strong>LabCorps Intern</strong></h3>
-                    <p class="location">United Way of Franklin County, Franklinton, NC</p>
-                    <p class="dates">May 2024 - Aug 2024</p>
-                    <div class="experienceDetails">
-                        <ul>
-                            <li>Created a functional bookings calendar and working inventory for the Innovation Mobile Lab, improving operational efficiency.</li>
-                            <li>Facilitated STEM-related activities and events geared towards middle school students in underserved areas, promoting educational equity.</li>
-                            <li>Worked with potential donors in meetings and grant-writing, securing funding for community programs.</li>
-                        </ul>
+                <!-- Activities Section -->
+                <div class="item bottomLineSeparator">
+                    <h2>ACTIVITIES</h2>
+                    <div class="activitiesItem">
+                        <h3><strong>Disability Advocates for Carolina</strong></h3>
+                        <span>Treasurer, Fall 2024 - May 2025</span>
+                    </div>
+                    <div class="activitiesItem">
+                        <h3><strong>Carolina Women in Business</strong></h3>
+                        <span>Mentor and Member, Fall 2021 - May 2025</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Contact Form -->
-            <div class="centeredWrapper">
-                <form action="mailto:egsutton212@gmail.com" method="post" enctype="text/plain">
-                    <h2>Questions for me?</h2>
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-                    <button type="submit">Send</button>
-                </form>
+            <!-- Right Panel -->
+            <div class="rightPanel">
+                <!-- Contact Section -->
+                <div class="item bottomLineSeparator">
+                    <h2>CONTACT</h2>
+                    <div class="contactInfo">
+                        <div class="smallText">
+                            <p>Email: <a href="mailto:egsutton212@gmail.com">egsutton212@gmail.com</a></p>
+                            <p>Phone: (980) 297-2714</p>
+                            <p class="linkedin"><a href="https://www.linkedin.com/in/emma-sutton-275a0722b/" target="_blank"><i class="fa fa-linkedin"></i> LinkedIn</a></p>
+                        </div>
+                    </div>
+                </div>
 
-                <a href="CV_Sutton.docx.pdf" class="downloadButton" download>Download CV</a>
+                <!-- Experience Section -->
+                <div class="item bottomLineSeparator">
+                    <h2>EXPERIENCE</h2>
+                    <div class="experienceItem">
+                        <h3 class="jobTitle"><strong>Campus Life Coordinator</strong></h3>
+                        <p class="location">Carolina Union, Chapel Hill, NC</p>
+                        <p class="dates">Sept 2022 - May 2025</p>
+                        <div class="experienceDetails">
+                            <ul>
+                                <li>Managed graduation requirements for over 15,000 undergraduate students, ensuring accurate record keeping.</li>
+                                <li>Organized programming events for voting advocacy, enhancing student engagement.</li>
+                                <li>Coordinated with 800 on campus, student-run organizations for constitution reregistration.</li>
+                                <li>Oversaw campus-wide website, HeelLife, to approve student forms and on campus events, streamlining administrative processes.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experienceItem">
+                        <h3 class="jobTitle"><strong>LabCorps Intern</strong></h3>
+                        <p class="location">United Way of Franklin County, Franklinton, NC</p>
+                        <p class="dates">May 2024 - Aug 2024</p>
+                        <div class="experienceDetails">
+                            <ul>
+                                <li>Created a functional bookings calendar and working inventory for the Innovation Mobile Lab, improving operational efficiency.</li>
+                                <li>Facilitated STEM-related activities and events geared towards middle school students in underserved areas, promoting educational equity.</li>
+                                <li>Worked with potential donors in meetings and grant-writing, securing funding for community programs.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="centeredWrapper">
+                    <form action="mailto:egsutton212@gmail.com" method="post" enctype="text/plain">
+                        <h2>Questions for me?</h2>
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                        <button type="submit">Send</button>
+                    </form>
+
+                    <a href="CV_Sutton.docx.pdf" class="downloadButton" download>Download CV</a>
+                </div>
             </div>
         </div>
-    </div>
-</page>
+    </page>
+</body>
+</html>
