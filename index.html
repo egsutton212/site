@@ -122,13 +122,12 @@
 
         .nameAndTitle {
             text-align: center;
-            margin-bottom: 20px;
+            margin: 20px auto;
             border: 2px solid rgb(43, 71, 131); /* Blue border */
             padding: 10px; /* Padding around the text */
             background-color: rgba(205, 205, 205, 0.99); /* White background */
             border-radius: 8px; /* Rounded corners */
             width: calc(100% - 40px); /* Full width minus padding */
-            margin: 0 auto;
         }
 
         .nameAndTitle h1 {
@@ -243,6 +242,12 @@
 </head>
 <body>
     <page size="A4">
+        <!-- Name and Title Section -->
+        <div class="nameAndTitle">
+            <h1>Emma Sutton</h1>
+            <h2>Information Science Student</h2>
+        </div>
+
         <div class="container">
             <!-- Left Panel -->
             <div class="leftPanel">
@@ -311,52 +316,50 @@
                 <!-- Experience Section -->
                 <div class="item bottomLineSeparator">
                     <h2>EXPERIENCE</h2>
-
                     <div class="experienceItem">
                         <h3 class="jobTitle"><strong>Campus Life Coordinator</strong></h3>
                         <p class="location">Carolina Union, Chapel Hill, NC</p>
                         <p class="dates">Sept 2022 - May 2025</p>
                         <div class="experienceDetails">
                             <ul>
-                                <li>Organized and managed campus events.</li>
-                                <li>Coordinated with student organizations to facilitate programs.</li>
-                                <li>Assisted with budgeting and event planning.</li>
+                                <li>Managed graduation requirements for over 15,000 undergraduate students, ensuring accurate record keeping.</li>
+                                <li>Organized programming events for voting advocacy, enhancing student engagement.</li>
+                                <li>Coordinated with 800 on campus, student-run organizations for constitution reregistration.</li>
+                                <li>Oversaw campus-wide website, HeelLife, to approve student forms and on campus events, streamlining administrative processes.</li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="experienceItem">
-                        <h3 class="jobTitle"><strong>IT Intern</strong></h3>
-                        <p class="location">Tech Solutions, Chapel Hill, NC</p>
-                        <p class="dates">May 2023 - Aug 2023</p>
+                        <h3 class="jobTitle"><strong>LabCorps Intern</strong></h3>
+                        <p class="location">United Way of Franklin County, Franklinton, NC</p>
+                        <p class="dates">May 2024 - Aug 2024</p>
                         <div class="experienceDetails">
                             <ul>
-                                <li>Provided technical support and troubleshooting for hardware and software issues.</li>
-                                <li>Assisted with network and system maintenance tasks.</li>
-                                <li>Documented and reported technical issues to the IT team.</li>
+                                <li>Created a functional bookings calendar and working inventory for the Innovation Mobile Lab, improving operational efficiency.</li>
+                                <li>Facilitated STEM-related activities and events geared towards middle school students in underserved areas, promoting educational equity.</li>
+                                <li>Worked with potential donors in meetings and grant-writing, securing funding for community programs.</li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <!-- Name and Title Section -->
-        <div class="nameAndTitle">
-            <h1>Emma Sutton</h1>
-            <h2>Data Science Enthusiast</h2>
-        </div>
 
-        <!-- Contact Form Section -->
+        <!-- Centered Wrapper for Download CV and Contact Form -->
         <div class="centeredWrapper">
-            <h2>Questions for me?</h2>
-            <form action="your-form-handler.php" method="post">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-            <a href="your-file-url" class="downloadButton" download>Download My Resume</a>
+            <a href="CV_Sutton.docx.pdf" class="downloadButton" download>Download CV</a>
+
+            <!-- Contact Form -->
+            <div class="item">
+                <h2>Questions for me?</h2>
+                <form action="mailto:egsutton212@gmail.com" method="post" enctype="text/plain">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
         </div>
     </page>
 </body>
